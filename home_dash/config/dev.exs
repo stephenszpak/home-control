@@ -3,7 +3,9 @@ import Config
 config :home_dash, HomeDash.Repo,
   database: Path.expand("../data/home_dash_dev.db", __DIR__),
   pool_size: 5,
-  show_sensitive_data_on_connection_error: true
+  show_sensitive_data_on_connection_error: true,
+  journal_mode: :wal,
+  busy_timeout: 60_000
 
 config :home_dash, HomeDashWeb.Endpoint,
   http: [ip: {0, 0, 0, 0}, port: 4000],
