@@ -3,11 +3,6 @@ import Config
 config :home_dash,
   ecto_repos: [HomeDash.Repo]
 
-config :home_dash, Oban,
-  repo: HomeDash.Repo,
-  plugins: [Oban.Plugins.Pruner],
-  queues: [default: 10]
-
 config :home_dash, HomeDashWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: HomeDashWeb.ErrorView, accepts: ~w(html json), layout: false],
