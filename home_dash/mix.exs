@@ -32,7 +32,6 @@ defmodule HomeDash.MixProject do
       {:phoenix_live_dashboard, "~> 0.8"},
       {:ecto_sql, "~> 3.11"},
       {:ecto_sqlite3, "~> 0.13"},
-      {:oban, "~> 2.16"},
       {:req, "~> 0.4"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},

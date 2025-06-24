@@ -7,7 +7,6 @@ defmodule HomeDash.Application do
       HomeDash.Repo,
       {Phoenix.PubSub, name: HomeDash.PubSub},
       HomeDashWeb.Endpoint,
-      {Oban, oban_config()},
       {Registry, keys: :unique, name: HomeDash.TimerRegistry.Registry},
       HomeDash.TimerRegistry,
       HomeDash.WeatherPoller
@@ -22,7 +21,4 @@ defmodule HomeDash.Application do
     :ok
   end
 
-  defp oban_config do
-    Application.get_env(:home_dash, Oban)
-  end
 end
