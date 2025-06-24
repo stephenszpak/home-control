@@ -31,6 +31,14 @@ Docker.
    DATABASE_PATH=./data/home_dash_prod.db  # optional database location
    ```
 
+3. Fetch the application dependencies to generate a `mix.lock` file:
+
+   ```bash
+   docker compose run --rm app mix deps.get
+   ```
+
+   This step only needs to be performed once after cloning the repository.
+
 ## Running the app
 
 From the `home_dash` directory run:
