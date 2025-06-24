@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HomeDash</title>
-    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}>
-    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(HomeDashWeb.Endpoint, "/assets/app.css")}>
+    <script defer phx-track-static type="text/javascript" src={Routes.static_path(HomeDashWeb.Endpoint, "/assets/app.js")}></script>
   </head>
   <body class="min-h-screen p-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
