@@ -31,6 +31,10 @@ Docker.
    DATABASE_PATH=./data/home_dash_prod.db  # optional database location
    ```
 
+The application uses SQLite. WAL mode and a long busy timeout are enabled to
+avoid `database is locked` errors when multiple connections attempt to access the
+database simultaneously.
+
 3. Fetch the application dependencies to generate a `mix.lock` file:
 
    ```bash
