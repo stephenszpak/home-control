@@ -8,8 +8,8 @@ RUN mix deps.get --only prod
 RUN mix deps.compile
 COPY assets assets
 RUN npm --prefix ./assets install
-RUN MIX_ENV=prod mix assets.deploy
 COPY . .
+RUN MIX_ENV=prod mix assets.deploy
 RUN mix compile
 RUN mix release
 
